@@ -1,0 +1,241 @@
+div.navigate {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "name ."
+    "name menu";
+}
+
+div.navigate div.navigate_items {
+    grid-area: menu;
+     padding:2%;
+    background-color: #CDC6CE;
+    text-align: right;
+   
+}
+
+div.navigate div.navigate_items a {
+    text-decoration: none; 
+    font-size: 1.5em;
+    margin: 4% 2%;
+    color:black;
+}
+
+div.navigate span {
+    padding: 10%;
+    grid-area:name;    
+    background-color: #DCB6B5;
+    font-size: 3vw;
+}
+
+div.navigate div.navigate_items a:hover {
+    background-color: #657984;
+    color:#DCB6B5;
+}
+
+div.pict {
+    margin: 0.2vw 0;
+    display: grid;
+    column-gap: 0.1vw;
+    row-gap: 0.1vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 20vw;
+    grid-template-areas: 
+    "pic-1 pic-2 pic-3";
+}
+
+div.pict img {
+    width:100%;
+    height:100%;
+}
+
+div.pict img.pic-1 {
+    grid-area: pic-1;
+}
+
+div.pict img.pic-2 {
+    grid-area: pic-2;
+}
+
+div.pict img.pic-3{
+    grid-area: pic-3;
+}
+
+div.text {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "block1 block2 block3 block4";
+    column-gap: 1%;
+}
+
+div.block1 {
+    grid-area:block1;
+    box-sizing:border-box;
+}
+
+div.block2 {
+    grid-area:block2;
+    box-sizing:border-box;
+}
+
+div.block3 {
+    grid-area:block3;
+    box-sizing:border-box;
+}
+
+div.block4 {
+    grid-area:block4;
+    box-sizing:border-box;
+}
+
+div.text img {
+    width: 40%;
+    height: 10%;
+}
+
+div.header {
+    font-size:2.5em;
+}
+
+div.text-lines {
+    line-height: 95%;
+    font-size:1.8em;
+}
+
+.block1, .block2,.block3,.block4{
+    text-align: center;
+    background-color: #DCB6B5;
+    height:fit-content;
+    font-size:1vw;
+    padding-bottom:1%;
+}
+
+.font{
+    font-size: 1.8rem;
+}
+
+div.content{
+    padding: 0.2vmax 10vmax;
+    margin: 0 0 5vw;
+}
+
+div.footer{
+    height: auto;
+    background-color: #808080;    
+}
+
+div.footer div.person{
+    font-size:1.5vw;
+    float:left;
+    padding: 0.5% 1%;
+}
+
+div.footer div.contact{
+    font-size:1.5vw;
+    text-align: right;
+    padding: 0.5% 1%;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr auto;
+}
+
+@media(max-width:800px) {
+    div.navigate {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+    
+    div.navigate span {
+        font-size:2rem;
+        text-align: center; 
+        margin-bottom:20%;
+    }
+
+    div.navigate div.navigate_items {
+        text-align: center;
+        display:grid;
+        grid-column:1/2;
+        grid-row:2/3;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        
+        
+    }
+    
+    div.navigate_items a.menu1{
+        grid-column:1/2;
+        grid-column:1/2;
+    }
+    div.navigate_items a.menu2{
+        grid-column:2/3;
+        grid-row:1/2;
+    }
+    div.navigate_items a.menu3{
+        grid-column:1/2;
+        grid-row:2/3;
+    }
+    div.navigate_items a.menu4{
+        grid-column:2/3;
+        grid-row:2/3;
+    }
+    
+    
+    div.pict {
+        grid-template-columns:1fr;
+        grid-template-rows:repeat(4,auto);
+        row-gap: 0.3vh;
+        grid-template-areas:
+        "pic-1"
+        "pic-2"
+        "pic-3";
+    }
+    div.pic-1 {
+        grid-area: pic-1;
+    }
+    div.pic-2 {
+        grid-area: pic-2;
+    }
+    div.pic-3 {
+        grid-area: pic-3;
+    }
+    div.text {
+        grid-template-columns: 1fr;
+        grid-template-rows:repeat(4, auto);
+        grid-template-areas:
+        "block1"
+        "block2"
+        "block3"
+        "block4";
+    }
+    div.header {
+        font-size:2rem;
+    }
+    div.text-lines {
+        margin:0;
+        text-align: center;
+    }
+    img.logo {
+        padding: 2% 0 0;
+        width:1vh;
+        height:1vh;
+    }
+    .block1, .block2,.block3,.block4{
+        margin: 1%;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
